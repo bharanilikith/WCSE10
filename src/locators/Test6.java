@@ -17,5 +17,5 @@ driver.findElement(By.cssSelector("input[type='password']")).sendKeys("manager")
 driver.findElement(By.cssSelector("button[value='1']")).click();	
 	
 	}
-
+  
 }
