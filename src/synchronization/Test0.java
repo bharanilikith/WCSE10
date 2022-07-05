@@ -17,16 +17,16 @@ public class Test0 {
 		driver.manage().window().maximize();
 		driver.get("https://demo.actitime.com/login.do");
 		
-		WebDriverWait w=new WebDriverWait(driver,Duration.ofSeconds(10));
+WebDriverWait w=new WebDriverWait(driver,Duration.ofSeconds(10));
 
-		WebElement user = driver.findElement(By.id("username"));
-		w.until(ExpectedConditions.visibilityOf(user)).sendKeys("admin");
+WebElement user = driver.findElement(By.id("username"));
+w.until(ExpectedConditions.visibilityOf(user)).sendKeys("admin");
 		
-		
-		driver.findElement(By.name("pwd")).sendKeys("manager");
-		driver.findElement(By.xpath("//div[text()='Login ']")).click();
+WebElement button = driver.findElement(By.xpath("//div[text()='Login ']"));
+w.until(ExpectedConditions.elementToBeClickable(button)).click();
 
 		String title = driver.getTitle();
+w.until(ExpectedConditions.titleContains("actiTIME - Login"));		
 		System.out.println(title);
 
 		if(title.equals("actiTIME - Login")) {
