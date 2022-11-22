@@ -12,8 +12,7 @@ WebDriver driver=new ChromeDriver();
 driver.manage().window().maximize();
 driver.get("https://demo.actitime.com/login.do");
 
-driver.findElement(By.id("username")).sendKeys("admin");
-driver.findElement(By.name("pwd")).click();
+driver.findElement(By.id("username")).sendK
 
 
 
